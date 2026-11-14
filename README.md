@@ -4,8 +4,8 @@
 composer install
 cp .env.example .env          # then edit DB_* and JWT_SECRET
 
-vendor/bin/phinx migrate
-vendor/bin/phinx seed:run
+php vendor/bin/phinx migrate -e default
+php vendor/bin/phinx seed:run -e default
 composer start                # http://localhost:8000 (API under /api/v1)
 composer test                 # PHPUnit, uses in-memory SQLite
 ```

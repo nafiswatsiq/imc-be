@@ -19,7 +19,7 @@ return [
         'default_migration_table' => 'phinxlog',
         'default_environment'     => 'default',
         'default' => [
-            'adapter' => 'pgsql',
+            'adapter' => $env('DB_DRIVER', 'pgsql'),
             'host'    => $env('DB_HOST', '127.0.0.1'),
             'name'    => $env('DB_NAME', 'imc_uam'),
             'user'    => $env('DB_USER', 'postgres'),
